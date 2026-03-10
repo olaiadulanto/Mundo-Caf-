@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Café: Historia, Tipos de Café, Métodos de Preparación y Cultura Cafetera</title>
+    <meta name="description" content="Descubre la apasionante historia del café, sus tipos, métodos de preparación y la rica cultura cafetera global en esta completa guía interactiva especializada.">
+    <meta name="author" content="Olaia Dulanto">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/foto-cafe.png">
+    <link rel="apple-touch-icon" href="assets/img/foto-cafe.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mundo Café",
+      "url": "https://mundocafe.com",
+      "description": "Guía interactiva sobre la historia del café, sus tipos, métodos de preparación y cultura cafetera.",
+      "author": {
+        "@type": "Person",
+        "name": "Olaia Dulanto"
+      },
+      "sameAs": [
+        "https://www.instagram.com/nespresso/",
+        "https://www.facebook.com/Nespresso"
+      ]
+    }
+    </script>
+    <!-- Scripts y fuentes ya existentes -->
+    <script type="application/ld+json">...</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    ...
+</head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mundo Café",
+  "url": "https://mundocafe.com",
+  "description": "Guía interactiva sobre la historia del café, sus tipos, métodos de preparación y cultura cafetera.",
+  "author": {
+    "@type": "Person",
+    "name": "Olaia Dulanto"
+  },
+  "sameAs": [
+    "https://www.instagram.com/nespresso/",
+    "https://www.facebook.com/Nespresso"
+  ]
+}
+</script>
+<link rel="icon" type="image/svg+xml"
+ href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23754738'/><text x='50' y='60' font-size='50' text-anchor='middle' fill='white'>☕</text></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafe: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0c1b3',
+                            400: '#d3a28a',
+                            500: '#c78d70',
+                            600: '#b87556',
+                            700: '#a66249',
+                            800: '#8c523f',
+                            900: '#754738',
+                            950: '#3e241c',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+html {
+  scroll-behavior: smooth;
+}
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .hero-pattern {
+            background-color: #3e241c;
+            background-image: url("https://www.transparenttextures.com/patterns/coffee-beans.png");
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #eaddd7;
+        }
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+        .gallery-item img {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #754738;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(117, 71, 56, 0.3);
+            text-decoration: none;
+        }
+        .video-btn:hover {
+            background-color: #8c523f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(117, 71, 56, 0.4);
+        }
+
+        /* Menu de Navegación Lateral / Overlay */
+        #mobile-menu {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="font-sans text-cafe-950 bg-cafe-50 overflow-x-hidden">
+
+    <!-- Barra de Navegación Fija -->
+    <nav class="fixed top-0 left-0 right-0 z-[60] glass-nav border-b border-cafe-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-cafe-800 p-2 rounded-lg text-white">
+                    <i class="fas fa-mug-hot fa-lg"></i>
+                </div>
+                <span class="font-serif text-2xl font-black tracking-tight text-cafe-900">Mundo Café</span>
+            </a>
+            
+            <!-- Botón Hamburguesa (Visible siempre) -->
+            <button id="menu-toggle" class="text-cafe-900 focus:outline-none p-2 hover:bg-cafe-100 rounded-full transition-colors" aria-label="Abrir menú">
+                <i class="fas fa-bars fa-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Overlay de Menú Desplegable (Cubre toda la pantalla o lateral) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[55] bg-white flex flex-col justify-center items-center text-center">
+        <div class="flex flex-col gap-6 font-serif text-3xl md:text-4xl font-bold text-cafe-900">
+            <a href="#historia" class="mobile-link hover:text-cafe-600 transition-colors">Historia</a>
+            <a href="#linea-temporal" class="mobile-link hover:text-cafe-600 transition-colors">Cronología</a>
+            <a href="#productores-info" class="mobile-link hover:text-cafe-600 transition-colors">Top Productores</a>
+            <a href="#productores" class="mobile-link hover:text-cafe-600 transition-colors">Mapa</a>
+            <a href="#metodos" class="mobile-link hover:text-cafe-600 transition-colors">Métodos</a>
+            <a href="#galeria" class="mobile-link hover:text-cafe-600 transition-colors">Galería</a>
+            <a href="#especialidad-espana" class="mobile-link hover:text-cafe-600 transition-colors text-xl md:text-2xl mt-4 opacity-70">Especialidad en España</a>
+        </div>
+        
+        <!-- Redes Sociales en el menú -->
+        <div class="mt-12 flex gap-8 text-cafe-400 text-2xl">
+            <i class="fab fa-instagram hover:text-cafe-800 cursor-pointer transition-colors"></i>
+            <i class="fab fa-youtube hover:text-cafe-800 cursor-pointer transition-colors"></i>
+            <i class="fab fa-x-twitter hover:text-cafe-800 cursor-pointer transition-colors"></i>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2070" alt="[Fondo de granos de café]" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-white text-center">
+            <h1 id="tituloCafe" class="font-serif text-5xl md:text-8xl font-bold mb-8"></h1></h1>
+            <p class="text-xl md:text-2xl text-cafe-100 max-w-2xl mx-auto mb-10">Explora la ciencia y la pasión detrás de cada taza.</p>
+        </div>
+    </header>
+
+    <!-- Historia -->
+    <section id="historia" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 text-left">
+                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" alt="[Granos de café antiguos]" class="rounded-3xl shadow-xl">
+                <div>
+                    <h2 class="font-serif text-4xl font-bold text-cafe-900 mb-6">Un Origen Legendario</h2>
+                    <p class="text-lg text-cafe-800 mb-4 leading-relaxed">
+                        La historia del café comienza en las tierras altas de Etiopía, donde según la leyenda, un joven pastor llamado Kaldi notó que sus cabras se volvían inusualmente energéticas tras comer las cerezas de un arbusto específico.
+                    </p>
+                    <p class="text-lg text-cafe-800 mb-4 leading-relaxed">
+                        Desde los monasterios sufíes en Yemen hasta las sofisticadas cafeterías de Venecia, el café ha sido el motor de revoluciones intelectuales y el compañero inseparable de la cultura moderna.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <a href="https://www.youtube.com/watch?v=S28hA3ZUmDY" target="_blank" class="video-btn">
+                    <i class="fab fa-youtube"></i> Ver Video: El café: de la leyenda a la taza
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Línea Temporal -->
+    <section id="linea-temporal" class="py-20 bg-cafe-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-5xl font-bold text-cafe-900 text-center mb-16">Línea Temporal del Café</h2>
+            <div class="relative timeline-line max-w-5xl mx-auto">
+                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-center">
+                    <div class="hidden md:block w-1/2 pr-12 text-right">
+                        <h3 class="text-2xl font-bold text-cafe-800">Siglo IX</h3>
+                    </div>
+                    <div class="z-10 flex items-center justify-center w-12 h-12 bg-cafe-800 text-white rounded-full shadow-lg border-4 border-white mb-4 md:mb-0">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+                        <div class="md:hidden block mb-1 font-bold text-cafe-800">Siglo IX</div>
+                        <h4 class="text-xl font-serif font-bold text-cafe-900 mb-2">Descubrimiento en Etiopía</h4>
+                        <p class="text-cafe-700 leading-relaxed">La leyenda de Kaldi y sus cabras energéticas en las montañas abisinias.</p>
+                    </div>
+                </div>
+                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row-reverse items-center">
+                    <div class="hidden md:block w-1/2 pl-12 text-left">
+                        <h3 class="text-2xl font-bold text-cafe-800">Siglo XV</h3>
+                    </div>
+                    <div class="z-10 flex items-center justify-center w-12 h-12 bg-cafe-700 text-white rounded-full shadow-lg border-4 border-white mb-4 md:mb-0">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pr-12 text-center md:text-right">
+                        <div class="md:hidden block mb-1 font-bold text-cafe-800">Siglo XV</div>
+                        <h4 class="text-xl font-serif font-bold text-cafe-900 mb-2">Expansión en el Mundo Árabe</h4>
+                        <p class="text-cafe-700 leading-relaxed">Nacen las primeras cafeterías en Yemen y se extiende por toda Arabia.</p>
+                    </div>
+                </div>
+                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-center">
+                    <div class="hidden md:block w-1/2 pr-12 text-right">
+                        <h3 class="text-2xl font-bold text-cafe-800">Siglo XVII</h3>
+                    </div>
+                    <div class="z-10 flex items-center justify-center w-12 h-12 bg-cafe-600 text-white rounded-full shadow-lg border-4 border-white mb-4 md:mb-0">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+                        <div class="md:hidden block mb-1 font-bold text-cafe-800">Siglo XVII</div>
+                        <h4 class="text-xl font-serif font-bold text-cafe-900 mb-2">Llegada del café a Europa</h4>
+                        <p class="text-cafe-700 leading-relaxed">Mercaderes venecianos introducen la bebida, conquistando Londres y París.</p>
+                    </div>
+                </div>
+                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row-reverse items-center">
+                    <div class="hidden md:block w-1/2 pl-12 text-left">
+                        <h3 class="text-2xl font-bold text-cafe-800">Siglo XIX</h3>
+                    </div>
+                    <div class="z-10 flex items-center justify-center w-12 h-12 bg-cafe-500 text-white rounded-full shadow-lg border-4 border-white mb-4 md:mb-0">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pr-12 text-center md:text-right">
+                        <div class="md:hidden block mb-1 font-bold text-cafe-800">Siglo XIX</div>
+                        <h4 class="text-xl font-serif font-bold text-cafe-900 mb-2">Expansión en América Latina</h4>
+                        <p class="text-cafe-700 leading-relaxed">Brasil y Colombia se posicionan como líderes mundiales en producción.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principales Productores de Café -->
+    <section id="productores-info" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-cafe-900 text-center mb-6">Principales productores de café en el mundo</h2>
+            <p class="text-center text-cafe-700 max-w-2xl mx-auto mb-16">El "Cinturón del Café" alberga naciones cuya economía y cultura giran en torno a este grano dorado.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Brasil -->
+                <div class="bg-cafe-50 rounded-3xl overflow-hidden shadow-lg border border-cafe-100 flex flex-col">
+                    <img src="assets/img/cafebrasil.png" alt="[Café de Brasil]" class="h-56 w-full object-cover">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-serif font-bold text-cafe-900 mb-4">Brasil</h3>
+                        <p class="text-cafe-800 mb-6 text-sm leading-relaxed">Es el mayor productor del mundo, representando el 35-40% de la producción global. Sus regiones clave incluyen Minas Gerais y São Paulo.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-cafe-600 mt-1"></i>
+                                <div><span class="font-bold text-cafe-900 block text-xs uppercase">Tipo de café:</span> <span class="text-cafe-700 text-sm">Principalmente Arábica y Robusta.</span></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cafe-100">
+                                <i class="fas fa-lightbulb text-cafe-500 mt-1"></i>
+                                <p class="text-cafe-800 text-xs italic"><span class="font-bold not-italic">Dato curioso:</span> Tan grande es su producción que el precio mundial del café suele fluctuar basándose en el clima de Brasil.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vietnam -->
+                <div class="bg-cafe-50 rounded-3xl overflow-hidden shadow-lg border border-cafe-100 flex flex-col">
+                    <img src="assets/img/cafevietnam.png" alt="[Café de Vietnam]" class="h-56 w-full object-cover">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-serif font-bold text-cafe-900 mb-4">Vietnam</h3>
+                        <p class="text-cafe-800 mb-6 text-sm leading-relaxed">Segundo productor mundial y líder indiscutible en café Robusta, fundamental para la industria del café soluble y mezclas.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-cafe-600 mt-1"></i>
+                                <div><span class="font-bold text-cafe-900 block text-xs uppercase">Tipo de café:</span> <span class="text-cafe-700 text-sm">Robusta mayoritariamente.</span></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cafe-100">
+                                <i class="fas fa-lightbulb text-cafe-500 mt-1"></i>
+                                <p class="text-cafe-800 text-xs italic"><span class="font-bold not-italic">Dato curioso:</span> El café tradicional de Vietnam se sirve con leche condensada debido a la histórica falta de leche fresca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colombia -->
+                <div class="bg-cafe-50 rounded-3xl overflow-hidden shadow-lg border border-cafe-100 flex flex-col">
+                    <img src="assets/img/cafecolombia.png" alt="[Café de Colombia]" class="h-56 w-full object-cover">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-serif font-bold text-cafe-900 mb-4">Colombia</h3>
+                        <p class="text-cafe-800 mb-6 text-sm leading-relaxed">Mundialmente famoso por su calidad suprema. Su cultivo se realiza en terrenos montañosos escarpados que requieren recolección manual.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-cafe-600 mt-1"></i>
+                                <div><span class="font-bold text-cafe-900 block text-xs uppercase">Tipo de café:</span> <span class="text-cafe-700 text-sm">100% Arábica de lavado suave.</span></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cafe-100">
+                                <i class="fas fa-lightbulb text-cafe-500 mt-1"></i>
+                                <p class="text-cafe-800 text-xs italic"><span class="font-bold not-italic">Dato curioso:</span> El "Paisaje Cultural Cafetero" de Colombia es Patrimonio de la Humanidad por la UNESCO.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indonesia -->
+                <div class="bg-cafe-50 rounded-3xl overflow-hidden shadow-lg border border-cafe-100 flex flex-col">
+                    <img src="assets/img/cafeindonesia.png" alt="[Café de Indonesia]" class="h-56 w-full object-cover">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-serif font-bold text-cafe-900 mb-4">Indonesia</h3>
+                        <p class="text-cafe-800 mb-6 text-sm leading-relaxed">Su geografía volcánica aporta un perfil terroso único. Sumatra y Java son sus islas más famosas en la industria cafetera.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-cafe-600 mt-1"></i>
+                                <div><span class="font-bold text-cafe-900 block text-xs uppercase">Tipo de café:</span> <span class="text-cafe-700 text-sm">Robusta y variedades Arábica exóticas.</span></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cafe-100">
+                                <i class="fas fa-lightbulb text-cafe-500 mt-1"></i>
+                                <p class="text-cafe-800 text-xs italic"><span class="font-bold not-italic">Dato curioso:</span> Indonesia es el hogar del Kopi Luwak, uno de los cafés más caros del mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etiopía -->
+                <div class="bg-cafe-50 rounded-3xl overflow-hidden shadow-lg border border-cafe-100 flex flex-col">
+                    <img src="assets/img/cafeetiopia.png" alt="[Café de Etiopía]" class="h-56 w-full object-cover">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-serif font-bold text-cafe-900 mb-4">Etiopía</h3>
+                        <p class="text-cafe-800 mb-6 text-sm leading-relaxed">La cuna genética del café. Aquí el café crece de forma silvestre y cada región (Yirgacheffe, Sidamo) tiene un sabor distinto.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-cafe-600 mt-1"></i>
+                                <div><span class="font-bold text-cafe-900 block text-xs uppercase">Tipo de café:</span> <span class="text-cafe-700 text-sm">Arábica con perfiles florales.</span></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cafe-100">
+                                <i class="fas fa-lightbulb text-cafe-500 mt-1"></i>
+                                <p class="text-cafe-800 text-xs italic"><span class="font-bold not-italic">Dato curioso:</span> La ceremonia del café es un ritual social clave que puede durar varias horas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- BLOQUE DEL GRÁFICO: PEGA AQUÍ -->
+<div class="mt-20 bg-white rounded-3xl shadow-lg p-10 border border-cafe-100">
+    <h3 class="font-serif text-3xl font-bold text-cafe-900 text-center mb-8">
+        Participación en la producción mundial de café
+    </h3>
+    <canvas id="graficoCafe"></canvas>
+</div>
+    </section>
+
+    <!-- Mapa de Productores -->
+    <section id="productores" class="py-20 bg-cafe-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl font-bold text-cafe-900 mb-6">Mapa de Producción</h2>
+            <div class="w-24 h-1 bg-cafe-600 mx-auto mb-12"></div>
+            <div class="max-w-[900px] mx-auto overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-white">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115160.67261986423!2d-55.858713175215754!3d-15.340078839088523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1ses!2ses!4v1711200000000!5m2!1ses!2ses" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Métodos -->
+    <section id="metodos" class="py-20 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl font-bold text-cafe-900 mb-16 text-center">Métodos de Extracción</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left mb-16">
+                <div class="bg-cafe-50 p-8 rounded-2xl border border-cafe-100">
+                    <i class="fas fa-coffee fa-2x text-cafe-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Prensa Francesa</h3>
+                    <p class="text-cafe-700">Cuerpo y textura sedosa mediante inmersión total.</p>
+                </div>
+                <div class="bg-cafe-50 p-8 rounded-2xl border border-cafe-100">
+                    <i class="fas fa-bolt fa-2x text-cafe-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Espresso</h3>
+                    <p class="text-cafe-700">Intensidad y crema lograda bajo alta presión.</p>
+                </div>
+                <div class="bg-cafe-50 p-6 rounded-2xl border border-cafe-100">
+                    <i class="fas fa-filter fa-2x text-cafe-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">V60</h3>
+                    <p class="text-cafe-700">Resalta la acidez y notas frutales con claridad suprema.</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <a href="https://www.youtube.com/shorts/Wx5E-zj4QlY" target="_blank" class="video-btn">
+                    <i class="fab fa-youtube"></i> Ver Tutorial: Métodos de vertido e inmersión
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-20 bg-cafe-50">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-5xl font-bold text-cafe-900 text-center mb-16">Galería del Café</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" alt="[Cerezas de café maduras]" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="[Taza de café humeante]" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="[Barista preparando café]" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800" alt="[Cafetería acogedora]" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=800" alt="[Latte Art detallado]" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-2xl aspect-square shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=800" alt="[Taza blanca con café]" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ruta del Especialidad -->
+    <section id="especialidad-espana" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-cafe-900 text-center mb-6">Ruta de Especialidad en España</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                <div class="group bg-cafe-50 rounded-3xl p-8 border border-cafe-100 hover:border-cafe-300 hover:shadow-xl transition-all h-full">
+                    <span class="text-cafe-500 font-bold text-xs uppercase mb-2 block">Madrid</span>
+                    <h3 class="text-2xl font-serif font-bold text-cafe-900 mb-4">Hola Coffee</h3>
+                    <p class="text-cafe-700 text-sm mb-6">Referente nacional por su tostado preciso y su atmósfera minimalista en Lavapiés.</p>
+                </div>
+                <div class="group bg-cafe-50 rounded-3xl p-8 border border-cafe-100 hover:border-cafe-300 hover:shadow-xl transition-all h-full">
+                    <span class="text-cafe-500 font-bold text-xs uppercase mb-2 block">Barcelona</span>
+                    <h3 class="text-2xl font-serif font-bold text-cafe-900 mb-4">Nomad Coffee</h3>
+                    <p class="text-cafe-700 text-sm mb-6">Laboratorio de ideas y tostadores pioneros que elevaron el estándar del café.</p>
+                </div>
+                <div class="group bg-cafe-50 rounded-3xl p-8 border border-cafe-100 hover:border-cafe-300 hover:shadow-xl transition-all h-full">
+                    <span class="text-cafe-500 font-bold text-xs uppercase mb-2 block">Valencia</span>
+                    <h3 class="text-2xl font-serif font-bold text-cafe-900 mb-4">Retrogusto</h3>
+                    <p class="text-cafe-700 text-sm mb-6">Ubicado en el Mercado Central, ofrece una experiencia sensorial única.</p>
+                </div>
+                <div class="group bg-cafe-50 rounded-3xl p-8 border border-cafe-100 hover:border-cafe-300 hover:shadow-xl transition-all h-full">
+                    <span class="text-cafe-500 font-bold text-xs uppercase mb-2 block">San Sebastián</span>
+                    <h3 class="text-2xl font-serif font-bold text-cafe-900 mb-4">Sakona</h3>
+                    <p class="text-cafe-700 text-sm mb-6">El proyecto de Javier García que mima cada grano frente al río Urumea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="py-20 bg-[#fcfaf9]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-serif font-bold text-[#3e241c] mb-4">Hablemos de Café</h2>
+                    <p class="text-gray-600 max-w-lg mx-auto">
+                        ¿Tienes alguna duda, quieres saber más? Escríbenos o suscríbete para recibir nuestras novedades artesanas.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-[#f2e8e5]">
+                    <form action="#" method="post" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-[#3e241c] ml-1">Nombre</label>
+                                <input type="text" name="nombre" required
+                                    class="w-full bg-[#fcfaf9] border border-[#f2e8e5] rounded-xl py-4 px-5 outline-none focus:border-[#8c523f] transition-all"
+                                    placeholder="Tu nombre completo">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-[#3e241c] ml-1">Email</label>
+                                <input type="email" name="email" required
+                                    class="w-full bg-[#fcfaf9] border border-[#f2e8e5] rounded-xl py-4 px-5 outline-none focus:border-[#8c523f] transition-all"
+                                    placeholder="hola@tuemail.com">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-[#3e241c] ml-1">Mensaje</label>
+                            <textarea name="mensaje" rows="5" required
+                                class="w-full bg-[#fcfaf9] border border-[#f2e8e5] rounded-xl py-4 px-5 outline-none focus:border-[#8c523f] transition-all resize-none"
+                                placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+
+                        <div class="text-center space-y-4">
+                            <button type="submit" 
+                                class="bg-[#3e241c] text-white font-bold py-4 px-12 rounded-full hover:bg-[#8c523f] transition-all active:scale-95 shadow-lg">
+                                ENVIAR MENSAJE
+                            </button>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest italic">
+                                * Los datos proporcionados se usarán únicamente para responder a tu mensaje.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+<!-- FOOTER CON ENLACES LEGALES -->
+<footer class="bg-[#3e241c] text-white pt-20 pb-10">
+    <div class="container mx-auto px-6 text-center">
+        <!-- Logo y Branding -->
+        <div class="flex items-center justify-center gap-2 mb-6">
+            <i class="fas fa-mug-hot text-[#f2e8e5] text-2xl"></i>
+            <span class="font-serif text-3xl font-bold tracking-tight">Mundo Café</span>
+        </div>
+        
+        <p class="text-[#f2e8e5] italic mb-10 text-lg">"El café es un lenguaje en sí mismo."</p>
+        
+        <!-- Redes Sociales -->
+ <div class="flex justify-center gap-8 mb-12">
+    <!-- Instagram Nespresso -->
+    <a href="https://www.instagram.com/nespresso/" target="_blank" rel="noopener noreferrer"
+       class="text-[#f2e8e5] hover:text-white text-2xl transition-all hover:scale-110">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Facebook Nespresso -->
+    <a href="https://www.facebook.com/Nespresso" target="_blank" rel="noopener noreferrer"
+       class="text-[#f2e8e5] hover:text-white text-2xl transition-all hover:scale-110">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <!-- WhatsApp ejemplo -->
+    <a href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer"
+       class="text-[#f2e8e5] hover:text-white text-2xl transition-all hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+        <!-- ENLACES LEGALES SOLICITADOS -->
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-[#f2e8e5]/60 font-medium text-sm">
+            <a href="#" class="hover:text-white transition-colors underline decoration-[#8c523f] decoration-2 underline-offset-4">Aviso Legal</a>
+            <a href="#" class="hover:text-white transition-colors underline decoration-[#8c523f] decoration-2 underline-offset-4">Política de Privacidad</a>
+            <a href="#" class="hover:text-white transition-colors underline decoration-[#8c523f] decoration-2 underline-offset-4">Política de Cookies</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/5 pt-10">
+            <p class="text-[#f2e8e5]/30 text-xs font-bold tracking-[0.3em] uppercase italic">
+                © 2026 POR OLAIA DULANTO
+            </p>
+        </div>
+    </div>
+</footer>
+                
+                <!-- ENLACES LEGALES -->
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-semibold text-white/60">
+                    <a href="#" class="hover:text-white transition-colors">POLÍTICA DE PRIVACIDAD</a>
+                    <a href="#" class="hover:text-white transition-colors">POLÍTICA DE COOKIES</a>
+                    <a href="#" class="hover:text-white transition-colors">AVISO LEGAL</a>
+                </nav>
+            </div>
+        </div>
+
+<!-- Librería Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Script para dibujar el gráfico con animación avanzada -->
+<script>
+const ctx = document.getElementById('graficoCafe').getContext('2d');
+
+// Datos de producción
+const labels = ['Brasil', 'Vietnam', 'Colombia', 'Indonesia', 'Etiopía'];
+const dataValues = [37, 17, 8, 7, 5];
+
+// Crear gradientes iniciales
+const gradientes = dataValues.map((_, i) => {
+    const g = ctx.createLinearGradient(0, 0, 0, 400);
+    const colors = [
+        ['#c78d70','#754738'],
+        ['#d3a28a','#a66249'],
+        ['#b87556','#8c523f'],
+        ['#e0c1b3','#b87556'],
+        ['#f2e8e5','#c78d70']
+    ];
+    g.addColorStop(0, colors[i][0]);
+    g.addColorStop(1, colors[i][1]);
+    return g;
+});
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Producción mundial (%)',
+            data: dataValues,
+            backgroundColor: gradientes,
+            borderRadius: 12,
+            barPercentage: 0.6,
+            categoryPercentage: 0.5
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            duration: 2500,
+            easing: 'easeOutBounce',
+            delay: (context) => context.dataIndex * 400
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.dataset.data[context.dataIndex] + '%';
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: { stepSize: 5, color: '#3e241c', font: { weight: 'bold' } },
+                grid: { color: '#f2e8e5' }
+            },
+            x: {
+                ticks: { color: '#3e241c', font: { weight: 'bold' } },
+                grid: { display: false }
+            }
+        }
+    },
+    plugins: [{
+        // Plugin para cambiar gradiente mientras se anima
+        id: 'gradienteAnimado',
+        beforeDatasetDraw(chart, args, options) {
+            const dataset = chart.data.datasets[0];
+            dataset.backgroundColor = dataset.data.map((_, i) => {
+                const g = ctx.createLinearGradient(0, 0, 0, chart.height);
+                const progress = chart._metasets[0].data[i].animated ? chart._metasets[0].data[i].height / chart.chartArea.bottom : 0;
+                // Mezcla colores según progreso
+                const start = `rgba(199,141,112,${0.5 + 0.5*progress})`;
+                const end = `rgba(117,71,56,${0.5 + 0.5*progress})`;
+                g.addColorStop(0, start);
+                g.addColorStop(1, end);
+                return g;
+            });
+        }
+    }]
+});
+</script>
+<script>
+const texto = "EL ARTE DEL CAFÉ";
+let i = 0;
+
+function escribirTexto() {
+    if (i < texto.length) {
+        document.getElementById("tituloCafe").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribirTexto, 80);
+    }
+}
+
+window.onload = escribirTexto;
+</script>
+</body>
+</html>
+  
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.toggle('active');
+            if (isOpen) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden'; // Evitar scroll al estar abierto
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
